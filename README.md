@@ -1,6 +1,6 @@
 # AtmoSphere
 
-A weather app built with the latest web technologies for optimized performance and an intuitive, visually appealing experience.
+A weather app built with the latest web technologies for optimized performance and an intuitive, visually appealing experience. **[TAKE A LOOK HERE](https://atmo-sphere.netlify.app/)**
 
 ## Technologies Stack
 
