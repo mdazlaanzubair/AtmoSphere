@@ -75,10 +75,6 @@ export default function Home() {
           {/* google fonts */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:wght@300;400;700&display=swap"
-            rel="stylesheet"
-          />
         </Head>
 
         <h1>Weather {isLoading}</h1>
