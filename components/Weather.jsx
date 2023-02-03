@@ -34,6 +34,7 @@ const Weather = ({ weatherData }) => {
           <a
             href={`https://maps.google.com/?q=${coord.lat},${coord.lon}&z=21`}
             target="_blank"
+            rel="noreferrer"
             className="grid grid-flow-row p-6 transition-all ease-in-out rounded-lg shadow-lg auto-cols-max md:grid-cols-min bg-white/40 hover:bg-black/40 hover:text-white"
           >
             <div className="row-span-1">
