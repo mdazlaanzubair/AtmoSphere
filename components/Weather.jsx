@@ -6,25 +6,26 @@ import { FaSeedling, FaCloudSun } from "react-icons/fa";
 const Weather = ({ weatherData }) => {
   // destructuring the weatherData for accessability
   const { coord, weather, main, wind, clouds, name } = weatherData;
+  
   return (
     <div className="relative z-10 flex items-center justify-center text-white align-middle ">
       <section className="text-gray-600 body-font">
         <div className="container justify-center px-3 py-5 mx-auto">
-          <div class="flex flex-col px-6 py-10 justify-center mx-auto items-start mb-5 bg-transparent max-w-sm w-full">
+          <div className="flex flex-col items-start justify-center w-full max-w-sm px-6 py-10 mx-auto mb-5 bg-transparent">
             <div className="flex">
-              <span class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-600 text-white rounded">
+              <span className="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold bg-indigo-600 text-white rounded">
                 {weather[0].main}
               </span>
             </div>
             <div className="flex flex-row items-center justify-center text-center">
               <Image
-                class="my-0 rounded-t-lg mx-auto flex-grow"
+                className="flex-grow mx-auto my-0 rounded-t-lg"
                 src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
                 width="75"
                 height="75"
                 alt="Weather Icon"
               />
-              <h1 class="text-gray-900 text-5xl font-bold mb-2 text-center flex-shrink">
+              <h1 className="flex-shrink mb-2 text-5xl font-bold text-center text-gray-900">
                 {(main.temp - 273.15).toFixed(0)} &#8451;
               </h1>
             </div>

@@ -12,54 +12,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   // creating state of app
   const [isLoading, setIsLoading] = useState(false); // loading state of app
-  const [city, setCity] = useState(""); // state for holding city to be fetched
-  const [weather, setWeather] = useState({
-    coord: {
-      lon: 67.0822,
-      lat: 24.9056,
-    },
-    weather: [
-      {
-        id: 800,
-        main: "Clear",
-        description: "clear sky",
-        icon: "01n",
-      },
-    ],
-    base: "stations",
-    main: {
-      temp: 292.05,
-      feels_like: 291.77,
-      temp_min: 292.05,
-      temp_max: 292.05,
-      pressure: 1017,
-      humidity: 68,
-    },
-    visibility: 6000,
-    wind: {
-      speed: 2.06,
-      deg: 300,
-    },
-    clouds: {
-      all: 0,
-    },
-    dt: 1675445691,
-    sys: {
-      type: 1,
-      id: 7576,
-      country: "PK",
-      sunrise: 1675390410,
-      sunset: 1675430238,
-    },
-    timezone: 18000,
-    id: 1174872,
-    name: "Karachi",
-    cod: 200,
-  }); // state to hold weather data response from API
+  const [city, setCity] = useState("Karachi"); // state for holding city to be fetched
+  const [weather, setWeather] = useState(); // state to hold weather data response from API
 
   const fetchWeatherData = async () => {
     const url = `${process.env.NEXT_PUBLIC_BASE_URL}?q=${city}&appid=${process.env.NEXT_PUBLIC_API_KEY}`;
-    console.log(url);
+
     // fetching data using axios
     try {
       // changing isLoading state
@@ -92,7 +50,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetchWeatherData("Karachi");
+    fetchWeatherData();
   }, []);
 
   /* loading state content */
