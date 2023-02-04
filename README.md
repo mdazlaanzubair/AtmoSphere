@@ -19,22 +19,20 @@ A weather app built with the latest web technologies for optimized performance a
 ![Application Preview](./asset/preview.png)
 
 ## How to run
+### Prerequisites
 
-Clone the repository and install the dependencies by running the following commands:
+- [ ] Node.js installed on your machine
+- [ ] A Open Weather Map API key (you can get one [here](https://openweathermap.org/api))
 
-```
-git clone https://github.com/mdazlaanzubair/AtmoSphere.git
-cd AtmoSphere
-npm install
-```
+### Installation
 
-Start the development server:
-
-```
-npm run dev
-```
-
-The app will be running on **[http://localhost:3000](http://localhost:3000)**.
+- [ ] Clone the repository: `git clone https://github.com/mdazlaanzubair/AtmoSphere.git`
+- [ ] Navigate to the project directory: `cd AtmoSphere`
+- [ ] Install the dependencies: `npm install`
+- [ ] Create a copy of the `.env.local.example` file and name it `.env.local`.
+- [ ] Replace `<YOUR-API-KEY-HERE>` in `.env` with your `OpenWeatherMap API` key.
+- [ ] Start the development server: npm start
+- [ ] Open [`http://localhost:3000`](http://localhost:3000) in your browser to view the app.
 
 ## Contribution
 
